@@ -1,4 +1,4 @@
-# Small World Enamine Zinc search
+# Small World Zinc search
 
 Small World is an index of chemical space containing more than 230B molecular substructures. Here we use the Small World API to post a query to the SmallWorld server. We sample 100 molecules within a distance of 10 specifically for the ZINC map, not the entire SmallWorld domain. Please check other small-world models available in our hub.
 
