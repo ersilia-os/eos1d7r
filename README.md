@@ -2,8 +2,7 @@
 
 Small World is an index of chemical space containing more than 230B molecular substructures. Here we use the Small World API to post a query to the SmallWorld server. We sample 100 molecules within a distance of 10 specifically for the ZINC map, not the entire SmallWorld domain. Please check other small-world models available in our hub.
 
-This model was incorporated on 2023-11-02.
-
+This model was incorporated on 2023-11-02.Last packaged on 2025-10-22.
 
 ## Information
 ### Identifiers
@@ -51,11 +50,11 @@ _10 of 100 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `583`
-- **Image Size (Mb):** `501.22`
+- **Image Size (Mb):** `524.74`
 
 **Computational Performance (seconds):**
-- 10 inputs: `87.28`
-- 100 inputs: `-1`
+- 10 inputs: `56.66`
+- 100 inputs: `1379.22`
 - 10000 inputs: `-1`
 
 ### References
