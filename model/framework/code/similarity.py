@@ -91,7 +91,10 @@ def get_maps():
 class SmallWorldSampler(object):
     def __init__(self, dist=10, length=100):
         self.maps = get_maps()
-        self.sw = SmallWorld()
+        try:
+            self.sw = SmallWorld(update_dbs=True)
+        except Exception:
+            self.sw = SmallWorld(update_dbs=False)
         self.dist = dist
         self.length = length
 
