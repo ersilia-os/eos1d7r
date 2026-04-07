@@ -2,6 +2,7 @@
 import os
 import csv
 import sys
+from concurrent.futures import ThreadPoolExecutor, TimeoutError
 from similarity import SmallWorldSampler
 
 # parse arguments
@@ -22,7 +23,12 @@ with open(input_file, "r") as f:
 sampler = SmallWorldSampler()
 outputs = []
 for smiles in smiles_list:
-    outputs += [sampler.sample(smiles)]
+    with ThreadPoolExecutor(max_workers=1) as executor:
+        future = executor.submit(sampler.sample, smiles)
+        try:
+            outputs += [future.result(timeout=120)]
+        except TimeoutError:
+            outputs += [[]]
 
 header = ["smiles_{0}".format(str(i).zfill(2)) for i in range(100)]
 blank = [None] * len(header)
