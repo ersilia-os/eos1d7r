@@ -125,7 +125,10 @@ class SmallWorldSampler(object):
             t0 = time.time()
         can_smiles = []
         for smi in sampled_smiles:
-            can_smiles += [Chem.MolToSmiles(Chem.MolFromSmiles(smi), True)]
+            mol = Chem.MolFromSmiles(smi)
+            if mol is None:
+                continue
+            can_smiles += [Chem.MolToSmiles(mol, True)]
         sampled_smiles = list(set(can_smiles))
         return sampled_smiles
 
@@ -134,7 +137,12 @@ class SmallWorldSampler(object):
         if len(sampled_smiles) == 0:
             return []
         mol_list = [Chem.MolFromSmiles(smi) for smi in sampled_smiles]
+        mol_list = [mol for mol in mol_list if mol is not None]
+        if len(mol_list) == 0:
+            return []
         ref_mol = Chem.MolFromSmiles(smiles)
+        if ref_mol is None:
+            return []
         sorted_molecules = sort_molecules_by_similarity(ref_mol, mol_list)
         sorted_smiles = [Chem.MolToSmiles(mol) for mol in sorted_molecules]
         return sorted_smiles
