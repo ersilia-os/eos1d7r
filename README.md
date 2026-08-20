@@ -1,6 +1,6 @@
 # Small World Zinc search
 
-Retrieves molecules structurally close to a query compound from ZINC, using SmallWorld, an index covering more than 230 billion molecular substructures. Instead of computing similarity locally, the query is posted to the public SmallWorld server and the 100 closest neighbours within a graph-edit distance of 10 are returned, restricted to the ZINC map rather than the full index. Output therefore depends on an external service and reflects the state of that index when the query is run.
+Small World is an index of chemical space containing more than 230B molecular substructures. Here we use the Small World API to post a query to the SmallWorld server. We sample 100 molecules within a distance of 10 specifically for the ZINC map, not the entire SmallWorld domain. Please check other small-world models available in our hub.
 
 This model was incorporated on 2023-11-02.Last packaged on 2026-07-21.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2023-11-02.Last packaged on 2026-07-21.
 ### Output
 - **Output Dimension:** `100`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** List of the 100 nearest neighbours to the query molecule in the ZINC library.
+- **Interpretation:** List of 100 nearest neighbors
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
