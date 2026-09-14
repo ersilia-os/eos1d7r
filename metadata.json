@@ -37,7 +37,7 @@
     "License": "MIT",
     "Contributor": "miquelduranfrigola",
     "Incorporation Date": "2023-11-02",
-    "Last Packaging Date": "2026-07-21",
+    "Last Packaging Date": "2026-09-14",
     "Release": "v1.0.0",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos1d7r.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos1d7r",
@@ -47,10 +47,10 @@
     ],
     "Model Size": 1.0,
     "Environment Size": 570.0,
-    "Image Size": 551.66,
-    "Computational Performance 1": 39.69,
-    "Computational Performance 2": 169.83,
-    "Computational Performance 3": 1294.28,
+    "Image Size": 560.81,
+    "Computational Performance 1": 46.69,
+    "Computational Performance 2": 169.38,
+    "Computational Performance 3": 1367.5,
     "Computational Performance 4": -1.0,
     "Computational Performance 5": -1.0
 }
