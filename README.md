@@ -1,6 +1,6 @@
 # Small World Zinc search
 
-Retrieves molecules structurally close to a query compound from ZINC, using SmallWorld, an index covering more than 230 billion molecular substructures. Instead of computing similarity locally, the query is posted to the public SmallWorld server and the 100 closest neighbours within a graph-edit distance of 10 are returned, restricted to the ZINC map rather than the full index. Output therefore depends on an external service and reflects the state of that index when the query is run.
+Retrieves molecules structurally close to a query compound from ZINC, using SmallWorld, an index covering more than 230 billion molecular substructures. Instead of computing similarity locally, the query is posted to the public SmallWorld server and hits within a graph-edit distance of 10 are returned, restricted to the ZINC map rather than the full index. Ersilia re-ranks those hits by Morgan fingerprint Tanimoto similarity and keeps the closest 100. Output depends on an external service and on the state of that index when the query runs.
 
 This model was incorporated on 2023-11-02.Last packaged on 2026-09-14.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2023-11-02.Last packaged on 2026-09-14.
 ### Output
 - **Output Dimension:** `100`
 - **Output Consistency:** `Variable`
-- **Interpretation:** List of the 100 nearest neighbours to the query molecule in the ZINC library.
+- **Interpretation:** Up to 100 nearest neighbours of the query molecule found in the ZINC chemical library.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
