@@ -2,7 +2,8 @@
 
 Retrieves molecules structurally close to a query compound from ZINC, using SmallWorld, an index covering more than 230 billion molecular substructures. Instead of computing similarity locally, the query is posted to the public SmallWorld server and hits within a graph-edit distance of 10 are returned, restricted to the ZINC map rather than the full index. Ersilia re-ranks those hits by Morgan fingerprint Tanimoto similarity and keeps the closest 100. Output depends on an external service and on the state of that index when the query runs.
 
-This model was incorporated on 2023-11-02.Last packaged on 2026-09-14.
+This model was incorporated on 2023-11-02.
+Last packaged on 2026-09-14.
 
 ## Information
 ### Identifiers
@@ -46,6 +47,7 @@ _10 of 100 columns are shown_
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos1d7r](https://hub.docker.com/r/ersiliaos/eos1d7r)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos1d7r.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos1d7r.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos1d7r_v2.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos1d7r_v2.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `1`
